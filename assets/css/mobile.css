@@ -1,0 +1,309 @@
+/* ============================================
+   Mobile-friendly styles for Waindo SpecTerra
+   ============================================ */
+
+/* ---- HEADER & NAVBAR ---- */
+@media (max-width: 991px) {
+  header {
+    height: auto !important;
+    min-height: 60px;
+  }
+
+  header .navbar {
+    padding: 8px 15px;
+  }
+
+  header .logo {
+    width: 140px !important;
+    max-width: 50vw;
+  }
+
+  .navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+    padding: 4px 8px;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .navbar-collapse {
+    background: rgba(6, 57, 110, 0.97);
+    padding: 10px 15px 15px;
+    margin-top: 8px;
+    border-radius: 4px;
+  }
+
+  /* FIX: responsive.css (Bootstrap 3) forces ".navbar-collapse.collapse{display:none!important}"
+     on mobile and only reveals ".collapse.in", but Bootstrap 4 JS toggles ".show".
+     This higher-specificity rule lets the BS4 toggle actually open the menu. */
+  .navbar-collapse.collapse.show {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 5px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    color: #fff !important;
+    font-size: 14px;
+  }
+
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none !important;
+  }
+
+  /* Push content below fixed header */
+  body {
+    padding-top: 60px;
+  }
+}
+
+/* ---- HERO SLIDER ---- */
+@media (max-width: 767px) {
+  .owl-carousel.home-slider .slider-item,
+  .owl-carousel.home-slider .slider-item .slider-text {
+    height: 55vw !important;
+    min-height: 220px !important;
+  }
+
+  .owl-carousel.home-slider .slider-item .slider-text h1 {
+    font-size: 18px !important;
+    line-height: 1.3;
+  }
+
+  .owl-carousel.home-slider .slider-item .slider-text p {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .owl-carousel.home-slider .slider-item,
+  .owl-carousel.home-slider .slider-item .slider-text {
+    height: 45vw !important;
+    min-height: 320px !important;
+  }
+
+  .owl-carousel.home-slider .slider-item .slider-text h1 {
+    font-size: 28px !important;
+  }
+}
+
+/* ---- PAGE CONTENT OFFSET (for fixed header) ---- */
+@media (max-width: 991px) {
+  .owl-carousel.home-slider {
+    margin-top: -60px;
+  }
+}
+
+/* ---- SECTION PADDING ---- */
+@media (max-width: 767px) {
+  section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .section-heading h2,
+  .site-section h2 {
+    font-size: 22px;
+  }
+
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 18px; }
+  h4 { font-size: 16px; }
+  h5 { font-size: 14px; }
+}
+
+/* ---- LAYANAN: TAB NAVIGATION ---- */
+@media (max-width: 767px) {
+  #myTab {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    border-bottom: 2px solid #dee2e6;
+    scrollbar-width: none;
+  }
+
+  #myTab::-webkit-scrollbar {
+    display: none;
+  }
+
+  #myTab .nav-item {
+    flex-shrink: 0;
+  }
+
+  #myTab .nav-link {
+    white-space: nowrap;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* ---- LAYANAN: CARDS (wahana, peralatan, kamera, produk, analisis) ---- */
+@media (max-width: 767px) {
+  /* Full-width cards on mobile */
+  .p-3.border.rounded {
+    margin-bottom: 16px;
+  }
+
+  /* Cut and Fill: stack columns */
+  .col-md-7,
+  .col-md-5 {
+    width: 100%;
+  }
+
+  /* Produk grid: 2 columns on mobile */
+  .col-md-6.col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Analisis grid: 2 columns on mobile */
+  .col-md-6.col-lg-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Card image heights */
+  .p-3.border.rounded img {
+    max-height: 150px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* 1 column on small phones */
+  .col-md-6.col-lg-3,
+  .col-md-6.col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* ---- HOME: FEATURE BOXES ---- */
+@media (max-width: 767px) {
+  .feature-left {
+    display: block !important;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .feature-left .icon {
+    margin: 0 auto 10px;
+  }
+
+  .ftco-counter .block-18 {
+    margin-bottom: 20px;
+  }
+}
+
+/* ---- HOME: CLIENTS / MITRA LOGO ---- */
+@media (max-width: 767px) {
+  .owl-carousel .item img {
+    max-height: 60px;
+    width: auto !important;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* ---- HOME: SERVICE CARDS ---- */
+@media (max-width: 767px) {
+  .services-wrap {
+    margin-bottom: 20px;
+  }
+
+  .block-7 {
+    margin-bottom: 30px;
+  }
+}
+
+/* ---- CAROUSEL (layanan) ---- */
+@media (max-width: 767px) {
+  .carousel-item {
+    height: 200px !important;
+    min-height: 200px !important;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #carouselExampleIndicators {
+    height: 200px;
+  }
+}
+
+/* ---- ABOUT & PRODUK PAGE ---- */
+@media (max-width: 767px) {
+  .col-md-6 img.img-fluid {
+    margin-left: 0 !important;
+    margin-top: 15px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .order-lg-1, .order-lg-2, .order-lg-3 {
+    order: unset !important;
+  }
+}
+
+/* ---- FOOTER ---- */
+@media (max-width: 767px) {
+  .site-footer .col-md-4 {
+    margin-bottom: 25px;
+  }
+
+  .site-footer h4,
+  .site-footer h3 {
+    margin-top: 0;
+  }
+
+  .footer-link li {
+    font-size: 13px;
+  }
+}
+
+/* ---- CONTACT PAGE ---- */
+@media (max-width: 767px) {
+  .contact-section .col-md-6,
+  .contact-section .col-md-12 {
+    margin-bottom: 20px;
+  }
+}
+
+/* ---- GENERAL UTILITIES ---- */
+@media (max-width: 767px) {
+  /* Prevent horizontal scroll */
+  .container-fluid,
+  .row {
+    overflow-x: hidden;
+  }
+
+  /* Tables in mobile */
+  table {
+    font-size: 12px;
+    width: 100% !important;
+  }
+
+  table th, table td {
+    padding: 6px 8px;
+    word-break: break-word;
+  }
+
+  /* Buttons */
+  .btn {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  /* List group items */
+  .list-group-item {
+    padding: 10px 12px;
+  }
+
+  /* Headings uppercase dalam card */
+  .text-uppercase.heading {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,84 @@
+[17-Feb-2020 04:18:29 UTC] PHP Parse error:  syntax error, unexpected '&' in /home/waind231/public_html/index.php on line 27
+[17-Feb-2020 04:19:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function bind() in /home/waind231/public_html/index.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/waind231/public_html/index.php on line 27
+[17-Feb-2020 04:20:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getbind() on null in /home/waind231/public_html/index.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/waind231/public_html/index.php on line 27
+[17-Feb-2020 04:20:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind() on null in /home/waind231/public_html/index.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/waind231/public_html/index.php on line 27
+[17-Feb-2020 04:21:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind() on null in /home/waind231/public_html/index.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/waind231/public_html/index.php on line 27
+[17-Feb-2020 11:47:18 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/waind231/public_html/index.php on line 58
+[17-Feb-2020 11:47:25 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/waind231/public_html/index.php on line 58
+[17-Feb-2020 11:47:52 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home/waind231/waindo/vendor/symfony/var-dumper/Resources/functions/dump.php on line 18
+[17-Feb-2020 11:48:07 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '?' in /home/waind231/waindo/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 500
+[17-Feb-2020 12:46:05 UTC] PHP Warning:  require(/home/waind231/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[17-Feb-2020 12:46:05 UTC] PHP Warning:  require(/home/waind231/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[17-Feb-2020 12:46:05 UTC] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[17-Feb-2020 12:48:25 UTC] PHP Warning:  require(/home/waind231/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[17-Feb-2020 12:48:25 UTC] PHP Warning:  require(/home/waind231/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[17-Feb-2020 12:48:25 UTC] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:04:24 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:04:24 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:04:24 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:24 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:24 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:24 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:27 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:27 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:27 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:30 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:30 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:30 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:32 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:32 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:32 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:32 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:32 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:32 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:32 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:32 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:09:32 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:11:54 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:11:54 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:11:54 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:14:55 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:14:55 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:14:55 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:17:05 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:17:05 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:17:05 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:27:33 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:27:33 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:27:33 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:28:58 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:28:58 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:28:58 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:31:35 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:31:35 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:31:35 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:32:52 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:32:52 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:32:52 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:32:52 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:32:52 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:32:52 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:33:12 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:33:12 Asia/Jakarta] PHP Warning:  require(/home/waind231/public_html/vendor/autoload.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 24
+[03-Aug-2020 09:33:12 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/waind231/public_html/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 24
+[07-Aug-2020 14:20:19 Asia/Jakarta] PHP Warning:  require_once(/home/waind231/public_html/bootstrap/app.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 39
+[07-Aug-2020 14:20:19 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/waind231/public_html/bootstrap/app.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 39
+[07-Aug-2020 14:28:43 Asia/Jakarta] PHP Warning:  require_once(/home/waind231/public_html/bootstrap/app.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 39
+[07-Aug-2020 14:28:43 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/waind231/public_html/bootstrap/app.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 39
+[07-Aug-2020 14:32:53 Asia/Jakarta] PHP Warning:  require_once(/home/waind231/public_html/bootstrap/app.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 39
+[07-Aug-2020 14:32:53 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/waind231/public_html/bootstrap/app.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 39
+[07-Aug-2020 14:39:20 Asia/Jakarta] PHP Warning:  require_once(/home/waind231/public_html/bootstrap/app.php): failed to open stream: No such file or directory in /home/waind231/public_html/index.php on line 39
+[07-Aug-2020 14:39:20 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/waind231/public_html/bootstrap/app.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/waind231/public_html/index.php on line 39
+[24-Feb-2021 20:11:04 Asia/Jakarta] PHP Warning:  mail() has been disabled for security reasons in /home/waind231/public_html/test123Cp.php on line 1

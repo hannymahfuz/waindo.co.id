@@ -1,0 +1,34 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8082:80"
+    environment:
+      DB_HOST: db
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - .:/var/www/html
+      - /var/www/html/vendor
+
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: rkak7754_webinar
+      MYSQL_USER: rkak7754_webinar
+      MYSQL_PASSWORD: "P@$$$$w0rdw41nd0"
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  db_data:
