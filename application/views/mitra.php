@@ -64,6 +64,30 @@
 	  -o-background-size: cover;
 	  background-size: cover;
 	}
+
+	/* Kartu Mitra Kerja: samakan tinggi kotak dan posisi teks agar rapi dalam satu baris, ukuran logo tetap seperti semula */
+	.thumbnail {
+	    height: 100%;
+	    min-height: 220px;
+	    display: flex;
+	    flex-direction: column;
+	    padding: 25px 15px;
+	}
+	.thumbnail a {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    height: 100%;
+	    width: 100%;
+	    text-decoration: none;
+	}
+	.thumbnail img {
+	    margin-top: auto;
+	    margin-bottom: auto;
+	}
+	.thumbnail .caption {
+	    width: 100%;
+	}
     </style>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/mobile.css">
   </head>
@@ -512,7 +536,7 @@
 	            <p>Jl. Pejaten Raya No.2 Jakarta Selatan 12510</p></span></li>
 	          <li class="d-flex"><span class="mr-3"><i class="fa fa-phone-square" aria-hidden="true"></i></span><span class="text-black">021 7986816; 7986405 </li>
 	          <li class="d-flex"><span class="mr-3"><i class="fa fa-fax" aria-hidden="true"></i></span><span class="text-black">021 7995539 </span></li>
-	          <li class="d-flex"><span class="mr-3"><i class="fa fa-envelope-o" aria-hidden="true"></i></span><span class="text-black"> marketing@waindo.co.id </span></li>
+	          <li class="d-flex"><span class="mr-3"><i class="fa fa-envelope-o" aria-hidden="true"></i></span><span class="text-black"> marketing@waindo.co.id; dis001@cbn.net.id </span></li>
 	        </ul>
 	      </div>
 	      <div class="col-md-4">

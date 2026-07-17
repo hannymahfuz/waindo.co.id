@@ -174,7 +174,7 @@
 	                </tr>
 	                <tr class="contact">
 	                  <td><i class="fa fa-envelope"></i></td>
-	                  <td>marketing@waindo.co.id</td>
+	                  <td>marketing@waindo.co.id; dis001@cbn.net.id</td>
 	                  </tr>
 	                </tbody>
 	            </table>
@@ -206,7 +206,7 @@
 	          <li class="d-flex"><span class="mr-3"><i class="fa fa-phone-square" aria-hidden="true"></i></span><span class="text-black">021 7986816; 7986405 </li>
 	          <li class="d-flex"><span class="mr-3"><i class="fa fa-fax" aria-hidden="true"></i></span><span class="text-black">021 7995539 </span></li>
 	          <!--<li class="d-flex"><span class="mr-3"><i class="fa fa-whatsapp" aria-hidden="true"></i></span><span class="text-black">+62 21 7986405</span></li>-->
-	          <li class="d-flex"><span class="mr-3"><i class="fa fa-envelope-o" aria-hidden="true"></i></span><span class="text-black"> marketing@waindo.co.id </span></li>
+	          <li class="d-flex"><span class="mr-3"><i class="fa fa-envelope-o" aria-hidden="true"></i></span><span class="text-black"> marketing@waindo.co.id; dis001@cbn.net.id </span></li>
 	        </ul>
 	      </div>
 	      <div class="col-md-4">

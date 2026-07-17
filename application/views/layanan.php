@@ -33,6 +33,47 @@
 	    border-bottom: 5px solid #379e34;
 	}
 
+	#myTab.nav-tabs-sticky {
+	    position: sticky;
+	    z-index: 1010;
+	    background-color: #fff;
+	    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+	    flex-wrap: nowrap;
+	}
+	#myTab.nav-tabs-sticky .nav-item {
+	    flex: 0 0 auto;
+	}
+	#myTab.nav-tabs-sticky .nav-link {
+	    padding: 0.6rem 0.85rem;
+	    white-space: nowrap;
+	}
+
+	/* Kartu Komponen Utama Peta Topografi: gambar di tengah, teks tetap di tengah-bawah */
+	.komponen-card {
+	    height: 100%;
+	    min-height: 220px;
+	    display: flex;
+	    flex-direction: column;
+	    padding: 20px 15px;
+	}
+	.komponen-card-inner {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    height: 100%;
+	    width: 100%;
+	}
+	.komponen-card-inner img {
+	    margin-top: auto;
+	    margin-bottom: auto;
+	    max-width: 100%;
+	    max-height: 150px;
+	    object-fit: contain;
+	}
+	.komponen-caption {
+	    width: 100%;
+	}
+
 	.pl-lg-5, .px-lg-5 {
 	    padding-left: 4rem !important;
 	} 
@@ -183,15 +224,31 @@
 	    </div>
 	    <div class="row mb-5 element-animate">
 	      <div class="col-md-12 order-lg-3 mb-5">
-	        <ul class="nav nav-tabs" id="myTab" role="tablist">
-	          <li class="nav-item">
-	            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#lidar" role="tab" aria-controls="home" aria-selected="true">Foto Udara dan Lidar</a>
+	        <ul class="nav nav-tabs nav-tabs-sticky" id="myTab" role="tablist">
+	          <li class="nav-item dropdown">
+	            <a class="nav-link dropdown-toggle active" id="home-tab" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Foto Udara dan Lidar</a>
+	            <div class="dropdown-menu" aria-labelledby="home-tab">
+	              <a class="dropdown-item foto-lidar-link" href="#fl-data-lidar">Data Lidar</a>
+	              <a class="dropdown-item foto-lidar-link" href="#fl-wahana">Wahana</a>
+	              <a class="dropdown-item foto-lidar-link" href="#fl-alat">Peralatan</a>
+	              <a class="dropdown-item foto-lidar-link" href="#fl-software">Software</a>
+	              <a class="dropdown-item foto-lidar-link" href="#fl-produk">Produk</a>
+	              <a class="dropdown-item foto-lidar-link" href="#fl-analisis">Analisis</a>
+	            </div>
 	          </li>
 	          <li class="nav-item">
-	            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#survey" role="tab" aria-controls="profile" aria-selected="false">Survey</a>
+	            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#survey" role="tab" aria-controls="profile" aria-selected="false">Survey Lapangan</a>
 	          </li>
 	          <li class="nav-item">
-	            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tematik" role="tab" aria-controls="profile" aria-selected="false">Tematik</a>
+	            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tematik" role="tab" aria-controls="profile" aria-selected="false">Peta Tematik</a>
+	          </li>
+	          <li class="nav-item dropdown">
+	            <a class="nav-link dropdown-toggle" id="peta-topografi-tab" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Peta Topografi</a>
+	            <div class="dropdown-menu" aria-labelledby="peta-topografi-tab">
+	              <a class="dropdown-item peta-topografi-link" href="#pt-definisi">Definisi</a>
+	              <a class="dropdown-item peta-topografi-link" href="#pt-komponen">Komponen Utama</a>
+	              <a class="dropdown-item peta-topografi-link" href="#pt-pembuatan">Pembuatan Peta Topografi</a>
+	            </div>
 	          </li>
 	          <li class="nav-item">
 	            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#training" role="tab" aria-controls="profile" aria-selected="false">Training</a>
@@ -207,7 +264,6 @@
 	        <div class="tab-content" id="myTabContent">
 	          <div class="tab-pane fade show active" id="lidar" role="tabpanel" aria-labelledby="home-tab" style="background: #fff;">
 	            <div class="list-group-item" style="margin-top: 10px;">
-	            <p><b>Data Lidar</b></p>
 	            <div class="row mb-5">
 	            	<div class="col-md-12 order-lg-3 mb-5">
 		            	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -220,61 +276,76 @@
 				            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
 				            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
 				            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+				            <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+				            <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
 				            
 				          </ol>
 				          <div class="carousel-inner" role="listbox">
 				            <!-- Slide One - Set the background image for this slide in the line below -->
-				            <div class="carousel-item active" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/7.jpeg')">
+				            <div class="carousel-item active" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/16.jpg')">
 				              <div class="carousel-caption d-none d-md-block">
 				                <!-- <h2 class="display-4">First Slide</h2> -->
 				                <!-- <p class="lead">This is a description for the first slide.</p> -->
 				              </div>
 				            </div>
 				            <!-- Slide Two - Set the background image for this slide in the line below -->
-				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/8.jpeg')">
+				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/17.jpg')">
 				              <div class="carousel-caption d-none d-md-block">
 				                <!-- <h2 class="display-4">Second Slide</h2>
 				                <p class="lead">This is a description for the second slide.</p> -->
 				              </div>
 				            </div>
 				            <!-- Slide Three - Set the background image for this slide in the line below -->
-				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/9.jpeg')">
+				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/18.jpg')">
 				              <div class="carousel-caption d-none d-md-block">
 				                <!-- <h2 class="display-4">Third Slide</h2>
 				                <p class="lead">This is a description for the third slide.</p> -->
 				              </div>
 				            </div>
-				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/10.jpeg')">
+				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/19.jpg')">
 				              <div class="carousel-caption d-none d-md-block">
 				                <!-- <h2 class="display-4">Third Slide</h2>
 				                <p class="lead">This is a description for the third slide.</p> -->
 				              </div>
 				            </div>
-				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/11.jpeg')">
+				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/20.jpg')">
 				              <div class="carousel-caption d-none d-md-block">
 				                <!-- <h2 class="display-4">Third Slide</h2>
 				                <p class="lead">This is a description for the third slide.</p> -->
 				              </div>
 				            </div>
-				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/12.jpeg')">
+				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/21.jpg')">
 				              <div class="carousel-caption d-none d-md-block">
 				                <!-- <h2 class="display-4">Third Slide</h2>
 				                <p class="lead">This is a description for the third slide.</p> -->
 				              </div>
 				            </div>
-				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/13.jpeg')">
+				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/22.jpg')">
 				              <div class="carousel-caption d-none d-md-block">
 				                <!-- <h2 class="display-4">Third Slide</h2>
 				                <p class="lead">This is a description for the third slide.</p> -->
 				              </div>
 				            </div>
-				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/14.jpeg')">
+				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/23.jpg')">
 				              <div class="carousel-caption d-none d-md-block">
 				                <!-- <h2 class="display-4">Third Slide</h2>
 				                <p class="lead">This is a description for the third slide.</p> -->
 				              </div>
 				            </div>
-				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/15.jpeg')">
+				            <div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/24.jpg')">
+				              <div class="carousel-caption d-none d-md-block">
+				                <!-- <h2 class="display-4">Third Slide</h2>
+				                <p class="lead">This is a description for the third slide.</p> -->
+				              </div>
+				            </div>
+							<div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/25.jpg')">
+				              <div class="carousel-caption d-none d-md-block">
+				                <!-- <h2 class="display-4">Third Slide</h2>
+				                <p class="lead">This is a description for the third slide.</p> -->
+				              </div>
+				            </div>
+							<div class="carousel-item" style="background-image: url('<?php echo base_url(); ?>assets/img/layanan/lidar/26.jpg')">
 				              <div class="carousel-caption d-none d-md-block">
 				                <!-- <h2 class="display-4">Third Slide</h2>
 				                <p class="lead">This is a description for the third slide.</p> -->
@@ -292,6 +363,7 @@
 				        </div>
 				    </div>
 	            </div>
+	            <p id="fl-data-lidar"><b>Data Lidar</b></p>
 	            <div class="row mb-5">
 	              <div class="col-md-6 order-lg-3 mb-5">
 	                <img src="<?php echo base_url(); ?>assets/img/Lidar.png" alt="Image placeholder" class="img-fluid" style="width: 450px;margin-top: -68px;">
@@ -327,7 +399,40 @@
 
 	            <!-- WAHANA -->
 	            <hr class="my-4">
-	            <p><b>Wahana Survei Udara</b></p>
+	            <p id="fl-wahana"><b>Wahana Survei Udara</b></p>
+
+	            <!-- MODEL 3D CESSNA 172 -->
+	            <div class="row mb-4">
+	              <div class="col-md-8 mx-auto mb-4">
+	                <div class="p-3 border rounded">
+	                  <h5 class="text-uppercase heading mb-3 text-center">Model 3D: Cessna 172</h5>
+	                  <model-viewer
+	                    src="<?php echo base_url(); ?>assets/models/cessna-172.glb"
+	                    alt="Model 3D pesawat Cessna 172 untuk akuisisi foto udara"
+	                    camera-controls
+	                    auto-rotate
+	                    auto-rotate-delay="1200"
+	                    rotation-per-second="16deg"
+	                    camera-orbit="20deg 78deg 60%"
+	                    interaction-prompt="none"
+	                    environment-image="neutral"
+	                    tone-mapping="neutral"
+	                    shadow-intensity="1.2"
+	                    shadow-softness="1"
+	                    exposure="1.1"
+	                    style="width:100%; height:clamp(220px, 28vw, 320px); background-color:transparent;">
+	                    <div slot="progress-bar"></div>
+	                  </model-viewer>
+	                  <p class="small text-muted mb-0 mt-3 text-center">
+	                    Sumber model 3D: &ldquo;Cessna 172&rdquo; oleh Szil&aacute;rd K. via
+	                    <a href="https://3dwarehouse.sketchup.com/model/bb0795effdb85b13e87d121b5fbf21f0/cessna-172" target="_blank" rel="noopener noreferrer">3D Warehouse (SketchUp)</a>.
+	                  </p>
+	                </div>
+	              </div>
+	            </div>
+	            <!-- model-viewer web component (Google) untuk merender file .glb -->
+	            <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
 	            <div class="row mb-5">
 	              <div class="col-md-6 mb-4">
 	                <div class="p-3 border rounded h-100">
@@ -357,24 +462,47 @@
 	              </div>
 	            </div>
 
-	            <!-- PERALATAN LIDAR -->
+	<!-- PERALATAN LIDAR -->
 	            <hr class="my-4">
-	            <p><b>Peralatan LiDAR</b></p>
+	            <p id="fl-alat"><b>Peralatan LiDAR</b></p>
+	            <p class="text-muted small mb-3">Konfigurasi Airborne LiDAR pada berbagai wahana Cessna:</p>
+	            <div class="row mb-4">
+	              <div class="col-md-4 mb-4">
+	                <div class="p-3 border rounded h-100 text-center">
+	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image45.jpg" alt="Konfigurasi Airborne LiDAR Teledyne Optech H300 pada Cessna 206 Caravan" class="img-fluid rounded mb-2" style="height:260px; object-fit:contain; width:100%; background:#f8f9fa; padding:6px;">
+	                  <p class="small text-muted mb-0">Teledyne Optech H300 pada Cessna 206 Caravan</p>
+	                </div>
+	              </div>
+	              <div class="col-md-4 mb-4">
+	                <div class="p-3 border rounded h-100 text-center">
+	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image46.jpg" alt="Konfigurasi Airborne LiDAR Teledyne Optech Galaxy T1000 pada Cessna 172 Caravan" class="img-fluid rounded mb-2" style="height:260px; object-fit:contain; width:100%; background:#f8f9fa; padding:6px;">
+	                  <p class="small text-muted mb-0">Teledyne Optech Galaxy T1000 pada Cessna 172 Caravan</p>
+	                </div>
+	              </div>
+	              <div class="col-md-4 mb-4">
+	                <div class="p-3 border rounded h-100 text-center">
+	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image47.jpg" alt="Konfigurasi Airborne LiDAR Teledyne Optech Galaxy T1000 pada Cessna 208 Caravan" class="img-fluid rounded mb-2" style="height:260px; object-fit:contain; width:100%; background:#f8f9fa; padding:6px;">
+	                  <p class="small text-muted mb-0">Teledyne Optech Galaxy T1000 pada Cessna 208 Caravan</p>
+	                </div>
+	              </div>
+	            </div>
 	            <div class="row mb-5">
 	              <div class="col-md-6 mb-4">
 	                <div class="p-3 border rounded h-100">
-	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image10.png" alt="Optech Galaxy T1000" class="img-fluid rounded mb-3" style="max-height:200px; object-fit:contain; width:100%;">
+	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image39.png" alt="Optech Galaxy T1000" class="img-fluid rounded mb-3" style="max-height:200px; object-fit:contain; width:100%;">
 	                  <h5 class="text-uppercase heading mb-3">Optech Galaxy T1000</h5>
 	                  <p class="text-muted small">High-Efficiency Airborne LiDAR System</p>
 	                  <p>Desain ringkas dan fleksibel, dapat dipasang pada berbagai jenis pesawat berawak termasuk Cessna 172P.</p>
+	                  <p class="small text-muted mb-0">Sumber gambar: <a href="https://www.unmannedsystemstechnology.com/2023/01/teledyne-geospatial-to-present-lidar-survey-mapping-solutions-at-geo-week-2023/" target="_blank" rel="noopener noreferrer">unmannedsystemstechnology.com</a>.</p>
 	                </div>
 	              </div>
 	              <div class="col-md-6 mb-4">
 	                <div class="p-3 border rounded h-100">
-	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image11.png" alt="Optech Orion H300" class="img-fluid rounded mb-3" style="max-height:200px; object-fit:contain; width:100%;">
+	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image40.png" alt="Optech Orion H300" class="img-fluid rounded mb-3" style="max-height:200px; object-fit:contain; width:100%;">
 	                  <h5 class="text-uppercase heading mb-3">Optech Orion H300</h5>
 	                  <p class="text-muted small">High-Accuracy Airborne LiDAR System</p>
 	                  <p>Kombinasi Cessna 172P + Optech Galaxy T1000 atau Orion H300 memungkinkan pemetaan dari skala luas hingga super detail dengan biaya lebih terjangkau.</p>
+	                  <p class="small text-muted mb-0">Sumber gambar: <a href="https://geo-matching.com/products/altm-orion-h300" target="_blank" rel="noopener noreferrer">geo-matching.com</a>.</p>
 	                </div>
 	              </div>
 	            </div>
@@ -385,24 +513,72 @@
 	            <div class="row mb-5">
 	              <div class="col-md-6 mb-4">
 	                <div class="p-3 border rounded h-100">
-	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image19.png" alt="Phase One iXU-RS1000" class="img-fluid rounded mb-3" style="max-height:200px; object-fit:contain; width:100%;">
+	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image42.jpg" alt="Phase One iXU-RS1000" class="img-fluid rounded mb-3" style="max-height:200px; object-fit:contain; width:100%;">
 	                  <h5 class="text-uppercase heading mb-3">Phase One iXU-RS1000</h5>
 	                  <p class="text-muted small">Metric Aerial Kamera</p>
 	                  <p>Kamera metrik profesional beresolusi 100 MP untuk citra udara dengan detail dan akurasi tinggi.</p>
+	                  <p class="small text-muted mb-0">Sumber gambar: <a href="https://www.npk-photonica.ru/product/18325/" target="_blank" rel="noopener noreferrer">npk-photonica.ru</a>.</p>
 	                </div>
 	              </div>
 	              <div class="col-md-6 mb-4">
 	                <div class="p-3 border rounded h-100">
-	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image18.png" alt="Hasselblad A6D 100C" class="img-fluid rounded mb-3" style="max-height:200px; object-fit:contain; width:100%;">
+	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image41.jpg" alt="Hasselblad A6D 100C" class="img-fluid rounded mb-3" style="max-height:200px; object-fit:contain; width:100%;">
 	                  <h5 class="text-uppercase heading mb-3">Hasselblad A6D 100C RGB/NIR</h5>
 	                  <p>Sensor 100 MP RGB dan Near Infrared (NIR) untuk pemetaan dasar, infrastruktur, analisis vegetasi, dan pengelolaan sumber daya alam.</p>
+	                  <p class="small text-muted mb-0">Sumber gambar: <a href="https://www.megapixel.cz/hasselblad-a6d-100c-near-infra-red-nir-bez-ir-filtru" target="_blank" rel="noopener noreferrer">megapixel.cz</a>.</p>
+	                </div>
+	              </div>
+	            </div>
+
+	            <!-- GNSS -->
+	            <hr class="my-4">
+	            <p id="fl-gnss"><b>GNSS</b></p>
+	            <p class="text-muted">Global Navigation Satellite System (GNSS) digunakan untuk penentuan posisi presisi tinggi di lapangan, mendukung pengukuran titik kontrol (GCP/ICP) dan Base Station pada seluruh rangkaian survei udara.</p>
+	            <div class="row mb-5">
+	              <div class="col-md-6 mb-4">
+	                <div class="p-3 border rounded h-100">
+	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image44.png" alt="Trimble R12" class="img-fluid rounded mb-3" style="max-height:200px; object-fit:contain; width:100%;">
+	                  <h5 class="text-uppercase heading mb-3">Trimble R12</h5>
+	                  <p class="text-muted small">GNSS RTK Receiver</p>
+	                  <p>GNSS receiver berperforma tinggi dengan akurasi tingkat sentimeter, didukung teknologi Trimble ProPoint dan lebih dari 672 channel untuk pelacakan multi-konstelasi GPS, GLONASS, Galileo, BeiDou, QZSS, dan SBAS. Cocok untuk survei topografi, konstruksi, dan pemetaan geospasial profesional.</p>
+	                </div>
+	              </div>
+	              <div class="col-md-6 mb-4">
+	                <div class="p-3 border rounded h-100">
+	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image43.png" alt="South Galaxy 1 Plus" class="img-fluid rounded mb-3" style="max-height:200px; object-fit:contain; width:100%;">
+	                  <h5 class="text-uppercase heading mb-3">South Galaxy 1 Plus</h5>
+	                  <p class="text-muted small">GNSS RTK Receiver</p>
+	                  <p>GNSS RTK receiver dengan 1.408-channel engine untuk pelacakan multi-konstelasi GPS, GLONASS, Galileo, BeiDou, QZSS, IRNSS, dan SBAS, dilengkapi IMU Tilt Compensation serta konektivitas Bluetooth, Wi-Fi, dan 4G LTE. Ideal untuk survei topografi, konstruksi, dan pemetaan GIS.</p>
+	                </div>
+	              </div>
+	            </div>
+
+	            <!-- SOFTWARE PENGOLAHAN -->
+	            <hr class="my-4">
+	            <p id="fl-software"><b>Software Pengolahan</b></p>
+	            <p class="text-muted">Data mentah hasil akuisisi (LiDAR dan foto udara) diolah melalui dua jalur perangkat lunak yang berbeda sebelum digabungkan menjadi produk akhir.</p>
+	            <div class="row mb-5">
+	              <div class="col-md-6 mb-4">
+	                <div class="p-3 border rounded h-100">
+	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image37.png" alt="Terrasolid Suite" class="rounded mb-3" style="height:280px; object-fit:contain; width:100%; background:#f8f9fa; padding:8px;">
+	                  <h5 class="text-uppercase heading mb-3">Terrasolid Suite</h5>
+	                  <p class="text-muted small">Software Pengolahan LiDAR</p>
+	                  <p>Pengolahan khusus data LiDAR dan <i>point cloud</i>: klasifikasi titik (tanah, vegetasi, bangunan), filter <i>ground</i>, hingga menghasilkan DSM, DTM, dan kontur. Alternatif: RiPROCESS, Leica HxMap.</p>
+	                </div>
+	              </div>
+	              <div class="col-md-6 mb-4">
+	                <div class="p-3 border rounded h-100">
+	                  <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/image38.jpg" alt="Trimble Inpho" class="rounded mb-3" style="height:280px; object-fit:contain; width:100%; background:#f8f9fa; padding:8px;">
+	                  <h5 class="text-uppercase heading mb-3">Trimble Inpho</h5>
+	                  <p class="text-muted small">Software Pengolahan Foto Udara</p>
+	                  <p>Pengolahan foto udara (<i>aero-triangulation</i>, orientasi, orthorektifikasi, dan mosaik) hingga menghasilkan ortofoto/peta foto mosaik yang presisi. Alternatif: Agisoft Metashape, Pix4D Mapper.</p>
 	                </div>
 	              </div>
 	            </div>
 
 	            <!-- PRODUK -->
 	            <hr class="my-4">
-	            <p><b>Produk</b></p>
+	            <p id="fl-produk"><b>Produk yang dihasilkan oleh Sensor Lidar dan Kamera Udara</b></p>
 	            <div class="row mb-5">
 	              <div class="col-md-6 col-lg-3 mb-4">
 	                <div class="p-3 border rounded h-100 text-center">
@@ -438,7 +614,7 @@
 
 	            <!-- ANALISIS -->
 	            <hr class="my-4">
-	            <p><b>Analisis</b></p>
+	            <p id="fl-analisis"><b>Analisis</b></p>
 	            <div class="row mb-4">
 	              <div class="col-md-12 mb-4">
 	                <div class="p-3 border rounded">
@@ -695,6 +871,81 @@
 	              </li>
 	            </ul>
 	          </div>
+	          <div class="tab-pane fade" id="petatopografi" role="tabpanel" aria-labelledby="peta-topografi-tab" style="background: #fff;">
+	            <div class="list-group-item" style="margin-top: 10px;">
+	            <p id="pt-definisi"><b>Definisi</b></p>
+	            <p class="text-muted">Peta topografi adalah peta yang menggambarkan bentuk permukaan bumi secara detail dan tiga dimensi, namun disajikan dalam bentuk dua dimensi pada bidang datar. Peta ini menunjukkan kondisi relief permukaan bumi seperti perbukitan, lembah, sungai, dan dataran, sehingga penggunanya dapat memahami karakteristik suatu wilayah dengan lebih baik.</p>
+
+	            <hr class="my-4">
+	            <p id="pt-komponen"><b>Komponen Utama</b></p>
+	            <p class="text-muted">Peta topografi dibentuk dari tiga komponen utama, yaitu kontur, penutup lahan, dan toponimi. Ketiga komponen ini digabungkan untuk menghasilkan peta topografi yang lengkap dan informatif.</p>
+	            <div class="row mb-3">
+	              <div class="col-md-6 col-lg-3 mb-4">
+	                <div class="komponen-card border rounded text-center">
+	                  <div class="komponen-card-inner">
+	                    <img src="<?php echo base_url(); ?>assets/img/layanan/peta-topografi/komponen-kontur.png" alt="Kontur" class="img-fluid rounded">
+	                    <div class="komponen-caption">
+	                      <h6 class="text-uppercase heading mb-0">Kontur</h6>
+	                    </div>
+	                  </div>
+	                </div>
+	              </div>
+	              <div class="col-md-6 col-lg-3 mb-4">
+	                <div class="komponen-card border rounded text-center">
+	                  <div class="komponen-card-inner">
+	                    <img src="<?php echo base_url(); ?>assets/img/layanan/peta-topografi/komponen-penutup-lahan.png" alt="Penutup Lahan" class="img-fluid rounded">
+	                    <div class="komponen-caption">
+	                      <h6 class="text-uppercase heading mb-0">Penutup Lahan</h6>
+	                    </div>
+	                  </div>
+	                </div>
+	              </div>
+	              <div class="col-md-6 col-lg-3 mb-4">
+	                <div class="komponen-card border rounded text-center">
+	                  <div class="komponen-card-inner">
+	                    <img src="<?php echo base_url(); ?>assets/img/layanan/peta-topografi/komponen-toponimi.png" alt="Toponimi" class="img-fluid rounded">
+	                    <div class="komponen-caption">
+	                      <h6 class="text-uppercase heading mb-0">Toponimi</h6>
+	                    </div>
+	                  </div>
+	                </div>
+	              </div>
+	              <div class="col-md-6 col-lg-3 mb-4">
+	                <div class="komponen-card border rounded text-center">
+	                  <div class="komponen-card-inner">
+	                    <img src="<?php echo base_url(); ?>assets/img/layanan/peta-topografi/komponen-hasil-peta-topografi.png" alt="Peta Topografi" class="img-fluid rounded">
+	                    <div class="komponen-caption">
+	                      <h6 class="text-uppercase heading mb-0">Peta Topografi</h6>
+	                    </div>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	            <p class="text-muted"><b>Kontur + Penutup Lahan + Toponimi = Peta Topografi.</b> Semakin lengkap ketiga lapisan ini, semakin informatif peta yang dihasilkan.</p>
+
+	            <hr class="my-4">
+	            <p id="pt-pembuatan"><b>Pembuatan Peta Topografi</b></p>
+	            <p class="text-muted">Seluruh proses Foto Udara dan LiDAR, mulai dari wahana, alat, software, hingga produk, bermuara pada satu alur kerja terpadu untuk menghasilkan Peta Topografi.</p>
+	            <div class="row mb-4">
+	              <div class="col-md-12 mb-4 text-center">
+	                <img src="<?php echo base_url(); ?>assets/img/layanan/foto-udara/alur_petatopo.png" alt="Alur kerja terintegrasi pembuatan Peta Topografi" class="img-fluid rounded" style="max-width:640px; width:100%;">
+	                <p class="small text-muted mb-0 mt-2">Alur kerja terintegrasi pembuatan Peta Topografi.</p>
+	              </div>
+	              <div class="col-md-12">
+	                <ol class="text-muted" style="line-height:1.8;">
+	                  <li class="mb-2"><b class="text-dark">Perencanaan Misi.</b> Menentukan wahana (berawak atau nirawak), sensor, dan jalur terbang sesuai dengan luas area serta tingkat akurasi yang dibutuhkan.</li>
+	                  <li class="mb-2"><b class="text-dark">Survey GNSS Lapangan.</b> Base Station GNSS merekam data koreksi secara kontinu, sementara tim lapangan mengukur titik GCP/ICP menggunakan GPS/GNSS geodetik <i>dual frequency</i>.</li>
+	                  <li class="mb-2"><b class="text-dark">Akuisisi Data Udara.</b> Wahana (Cessna 172P atau DJI Matrice 300 RTK) membawa sensor LiDAR, kamera udara, dan IMU/GNSS secara bersamaan untuk merekam data di lapangan.</li>
+	                  <li class="mb-2"><b class="text-dark">Pengolahan Data LiDAR.</b> Data <i>raw</i> diolah menggunakan Terrasolid menjadi <i>point cloud</i> terklasifikasi, DSM, DTM, dan peta kontur.</li>
+	                  <li class="mb-2"><b class="text-dark">Pengolahan Foto Udara.</b> Foto udara diolah menggunakan Trimble Inpho melalui triangulasi udara dan stereomodel untuk menghasilkan ortofoto dan peta foto mosaik.</li>
+	                  <li class="mb-2"><b class="text-dark">Integrasi Produk.</b> Data kontur dari LiDAR dan peta foto dari fotogrametri digabungkan bersama data penutup lahan dan toponimi untuk membentuk Peta Topografi yang lengkap.</li>
+	                  <li class="mb-2"><b class="text-dark">Publikasi.</b> Seluruh produk disimpan dan dipublikasikan melalui Server Data Center (ArcGIS Enterprise dan AFE) agar dapat diakses serta dimanfaatkan lintas sektor.</li>
+	                </ol>
+	              </div>
+	            </div>
+
+	            </div>
+	          </div>
 	          <div class="tab-pane fade" id="training" role="tabpanel" aria-labelledby="contact-tab" style="background: #fff;">
 	            <ul class="list-group">
 	              <li class="list-group-item" style="margin-top: 10px;">
@@ -867,7 +1118,7 @@
 	            <p>Jl. Pejaten Raya No.2 Jakarta Selatan 12510</p></span></li>
 	          <li class="d-flex"><span class="mr-3"><i class="fa fa-phone-square" aria-hidden="true"></i></span><span class="text-black">021 7986816; 7986405 </li>
 	          <li class="d-flex"><span class="mr-3"><i class="fa fa-fax" aria-hidden="true"></i></span><span class="text-black">021 7995539 </span></li>
-	          <li class="d-flex"><span class="mr-3"><i class="fa fa-envelope-o" aria-hidden="true"></i></span><span class="text-black"> marketing@waindo.co.id </span></li>
+	          <li class="d-flex"><span class="mr-3"><i class="fa fa-envelope-o" aria-hidden="true"></i></span><span class="text-black"> marketing@waindo.co.id; dis001@cbn.net.id </span></li>
 	        </ul>
 	      </div>
 	      <div class="col-md-4">
@@ -971,6 +1222,69 @@
 	  });
     </script>
     
+
+    <!-- Dropdown menu "Foto Udara dan Lidar" & "Peta Topografi": aktifkan tab terkait lalu scroll ke section -->
+    <script>
+    $(function () {
+      var $myTab = $('#myTab');
+      var $lidarToggle = $('#home-tab');
+      var $topografiToggle = $('#peta-topografi-tab');
+      var $allDropdownToggles = $lidarToggle.add($topografiToggle);
+
+      // header pakai logo ber-unit vh sehingga tingginya dinamis: tempelkan #myTab tepat di bawahnya
+      function updateStickyTabOffset() {
+        var headerOffset = $('header').outerHeight() || 90;
+        $myTab.css('top', headerOffset + 'px');
+      }
+      updateStickyTabOffset();
+      $(window).on('resize', updateStickyTabOffset);
+
+      // aktifkan tab pane terkait secara manual, tanpa scroll
+      function activateDropdownTab($toggle, tabPaneId) {
+        // lepaskan status active dari SEMUA nav-link (dropdown maupun tab biasa) agar hanya satu yang aktif
+        $('#myTab .nav-link').removeClass('active');
+        $toggle.addClass('active');
+        $('#myTabContent .tab-pane').removeClass('show active');
+        $(tabPaneId).addClass('show active');
+      }
+
+      function gotoDropdownSection($toggle, tabPaneId, hash) {
+        activateDropdownTab($toggle, tabPaneId);
+        // scroll ke section tujuan, dikurangi tinggi header + tinggi #myTab yang sticky
+        var $target = $(hash);
+        if ($target.length) {
+          var headerOffset = $('header').outerHeight() || 90;
+          var tabOffset = $myTab.outerHeight() || 0;
+          $('html, body').animate({ scrollTop: $target.offset().top - headerOffset - tabOffset - 20 }, 400);
+        }
+      }
+
+      // klik langsung pada menu "Foto Udara dan Lidar": pindah tampilkan kontennya, tanpa scroll
+      $lidarToggle.on('click', function (e) {
+        e.preventDefault();
+        activateDropdownTab($lidarToggle, '#lidar');
+      });
+      $('.foto-lidar-link').on('click', function (e) {
+        e.preventDefault();
+        gotoDropdownSection($lidarToggle, '#lidar', $(this).attr('href'));
+      });
+
+      // klik langsung pada menu "Peta Topografi": pindah tampilkan kontennya, tanpa scroll
+      $topografiToggle.on('click', function (e) {
+        e.preventDefault();
+        activateDropdownTab($topografiToggle, '#petatopografi');
+      });
+      $('.peta-topografi-link').on('click', function (e) {
+        e.preventDefault();
+        gotoDropdownSection($topografiToggle, '#petatopografi', $(this).attr('href'));
+      });
+
+      // saat tab biasa dipilih, lepaskan status active dari kedua dropdown
+      $('#myTab a[data-toggle="tab"]').on('click', function () {
+        $allDropdownToggles.removeClass('active');
+      });
+    });
+    </script>
 
   </body>
 </html>

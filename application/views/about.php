@@ -205,15 +205,16 @@
 	            </div>
 	          </div>
 
+	          <!-- Andreas Surajdi disembunyikan dari tampilan atas permintaan; foto & deskripsi tetap ada di assets/modal, tidak dihapus.
 	          <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
 	            <div class="media d-block media-feature text-center">
-	              <!-- <span class="icon"> --><img style="width: 100px;height: 100px;border-radius: 50%;" src="<?php echo base_url(); ?>assets/img/struktur/p_radji.jpeg"><!-- </span> -->
-	             
+	              <img style="width: 100px;height: 100px;border-radius: 50%;" src="<?php echo base_url(); ?>assets/img/struktur/p_radji.jpeg">
+
 	              <div class="media-body">
 	                <br>
 	                <h5>Andreas Surajdi</h5>
 	                <p><h6>Fotogrametri Specialist</h6></p>
-	                    
+
 	                    <button type="button" data-toggle="modal" data-target="#radji" class="btn btn-outline-primary btn-sm " style="color: black;">
 						  Lihat Profil
 						</button>
@@ -221,6 +222,7 @@
 	              </div>
 	            </div>
 	          </div>
+	          -->
 
 	          <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
 	            <div class="media d-block media-feature text-center">
@@ -272,10 +274,11 @@
 	            </div>
 	          </div>
 	          
+	          <!-- Luwin Eska Darwini disembunyikan dari tampilan atas permintaan; foto & deskripsi tetap ada di assets/modal, tidak dihapus.
 	          <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
 	            <div class="media d-block media-feature text-center">
-	              <!-- <span class="icon"> --><img style="width: 100px;height: 100px;border-radius: 50%;" src="<?php echo base_url(); ?>assets/img/struktur/luwin.jpeg"><!-- </span> -->
-	             
+	              <img style="width: 100px;height: 100px;border-radius: 50%;" src="<?php echo base_url(); ?>assets/img/struktur/luwin.jpeg">
+
 	              <div class="media-body">
 	                 <br>
 	                <h5>Luwin Eska Darwini</h5>
@@ -286,6 +289,7 @@
 	              </div>
 	            </div>
 	          </div>
+	          -->
 	          
 	          <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
 	            <div class="media d-block media-feature text-center">
@@ -331,7 +335,7 @@
 	            <p>Jl. Pejaten Raya No.2 Jakarta Selatan 12510</p></span></li>
 	          <li class="d-flex"><span class="mr-3"><i class="fa fa-phone-square" aria-hidden="true"></i></span><span class="text-black">021 7986816; 7986405 </li>
 	          <li class="d-flex"><span class="mr-3"><i class="fa fa-fax" aria-hidden="true"></i></span><span class="text-black">021 7995539 </span></li>
-	          <li class="d-flex"><span class="mr-3"><i class="fa fa-envelope-o" aria-hidden="true"></i></span><span class="text-black"> marketing@waindo.co.id </span></li>
+	          <li class="d-flex"><span class="mr-3"><i class="fa fa-envelope-o" aria-hidden="true"></i></span><span class="text-black"> marketing@waindo.co.id; dis001@cbn.net.id </span></li>
 	        </ul>
 	      </div>
 	      <div class="col-md-4">
@@ -644,7 +648,8 @@
 	            nodes: [
 	                { id: 1, Nama: "Gunawan Jaya", Jabatan: "Direktur Utama", img: "<?php echo base_url(); ?>assets/img/struktur/Gunawan Jaya.jpg" },
 	                { id: 2, pid: 1, Nama: "Iwan Satriawan", Jabatan: "Direktur Marketing", img: "<?php echo base_url(); ?>assets/img/struktur/iwanst.jpg" },
-	                { id: 3, pid: 1, Nama: "Ir. Andreas Suradji", Jabatan: "Direktur Riset & Pengembangan", img: "<?php echo base_url(); ?>assets/img/struktur/p_radji.jpeg" },
+	                // Ir. Andreas Suradji disembunyikan dari struktur organisasi atas permintaan; data foto tetap ada di assets.
+	                // { id: 3, pid: 1, Nama: "Ir. Andreas Suradji", Jabatan: "Direktur Riset & Pengembangan", img: "<?php echo base_url(); ?>assets/img/struktur/p_radji.jpeg" },
 	                { id: 4, pid: 2, Nama: "Bussiness Development Division" },
 	                { id: 5, pid: 2, Nama: "Finance Departement" },
 	                { id: 6, pid: 2, Nama: "HR Departement" },
