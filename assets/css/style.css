@@ -1,3 +1,13 @@
+/* Site loads both Bootstrap 4 (bootstrap.css) and an old Bootstrap 3 build
+   (bootstrap.min.css) for legacy reasons. bootstrap.min.css loads last and
+   its ".modal.fade .modal-dialog" rule ties in specificity with Bootstrap 4's
+   ".modal.show .modal-dialog", so the dialog gets stuck off-screen at its
+   hidden transform and the close button becomes unreachable. Force the
+   correct open-state transform so it always wins. */
+.modal.show .modal-dialog {
+  transform: translate(0, 0) !important;
+}
+
 /*header*/
 
 body {

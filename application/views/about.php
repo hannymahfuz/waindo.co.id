@@ -27,6 +27,7 @@
 
     <!-- Sektor-->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/sektor.css ">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery.orgchart.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <style type="text/css">
     .modal-content {
@@ -60,6 +61,17 @@
 	}
 	.active, .accordion:hover {
 	    background-color: #1e4c7c;
+	}
+	.orgchart .oc-avatar {
+	    width: 44px;
+	    height: 44px;
+	    border-radius: 50%;
+	    object-fit: cover;
+	    margin: 4px auto 2px;
+	    display: block;
+	}
+	#orgchart {
+	    overflow-x: auto;
 	}
     </style>
       <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/mobile.css">
@@ -151,16 +163,17 @@
 	            <p class="mb-3 element-animate nav-bar" style="text-align: justify;">Dalam mendukung kualitas layanan, PT Waindo SpecTerra menjalin kerja sama strategis dengan <b>Asia Air Survey Co., Ltd. (Jepang)</b> dan <b>Mobiltech Co., Ltd. (Korea Selatan)</b>, serta merupakan <b>Authorized Partner Esri</b>, pengembang platform GIS terdepan di dunia. Melalui kolaborasi tersebut, PT Waindo SpecTerra senantiasa menghadirkan solusi geospasial yang inovatif serta menjamin kualitas, akurasi, dan keandalan hasil pada setiap proyek yang dikerjakan.</p>
 	          </div>
 	        </div>
+	        <!-- Struktur Organisasi disembunyikan sementara - tampilan belum sempurna
 	        <div class="row mb-5">
 	          <div class="col-md-12 text-center">
 	            <p class="mb-3" style="text-align: justify;"><h3 class="text-uppercase heading border-bottom mb-4 element-animate nav-bar">Struktur Organisasi</h3></p>
-	            <!-- <p><iframe src="https://docs.google.com/gview?url=http://dipersip.riau.go.id/wp-content/uploads/2017/09/STRUKTUR-ORGANISASI-DINAS-PERPUSTAKAAN-DAN-KEARSIPAN.pdf&#038;embedded=true" frameborder="0" style="width: 100%; height: 500px;"></iframe></p> -->
 	            <p>
-	              <div class="element-animate" style="width:100%; height:700px;" id="orgchart"/>
+	              <div class="element-animate" style="width:100%; height:700px;" id="orgchart"></div>
 	            </p>
 
 	          </div>
 	        </div>
+	        -->
 	        <div class="row mb-5">
 	          <div class="col-md-12 text-center">
 	            <h2 class="text-uppercase heading border-bottom mb-4 element-animate">The Teams</h2>
@@ -610,43 +623,53 @@
     <script src="<?php echo base_url(); ?>assets/js/owl.carousel.min.js "></script>
     <script src="<?php echo base_url(); ?>assets/js/jquery.waypoints.min.js "></script>
     <script src="<?php echo base_url(); ?>assets/js/main.js "></script>
-    <script src="<?php echo base_url(); ?>assets/js/orgchart.js "></script>
+    <!-- <script src="<?php echo base_url(); ?>assets/js/jquery.orgchart.js"></script> -->
     <script>
-	var chart = new OrgChart(document.getElementById("orgchart"), {
-	            mouseScrool: OrgChart.action.none,
-	            scaleInitial: 0.7,
-	            'zoom': true,
-	            layout: OrgChart.tree,
-	            // enableSearch: false,
-	            // template: "base", 
-	            nodeBinding: {
-	                field_0: "Nama",
-	                field_1: "Jabatan",
-	                img_0: "img"
-	            },
-	            nodes: [
-	                { id: 1, Nama: "Gunawan Jaya", Jabatan: "Direktur Utama", img: "<?php echo base_url(); ?>assets/img/struktur/Gunawan Jaya.jpg" },
-	                { id: 2, pid: 1, Nama: "Iwan Satriawan", Jabatan: "Direktur Marketing", img: "<?php echo base_url(); ?>assets/img/struktur/iwanst.jpg" },
-	                // Ir. Andreas Suradji disembunyikan dari struktur organisasi atas permintaan; data foto tetap ada di assets.
-	                // { id: 3, pid: 1, Nama: "Ir. Andreas Suradji", Jabatan: "Direktur Riset & Pengembangan", img: "<?php echo base_url(); ?>assets/img/struktur/p_radji.jpeg" },
-	                { id: 4, pid: 2, Nama: "Bussiness Development Division" },
-	                { id: 5, pid: 2, Nama: "Finance Departement" },
-	                { id: 6, pid: 2, Nama: "HR Departement" },
-	                { id: 7, pid: 2, Nama: "Data and Software Division" },
-	                { id: 8, pid: 2, Nama: "Thematic Division" },
-	                { id: 9, pid: 2, Nama: "FotoGrametri Division" },
-	                { id: 10, pid: 2, Nama: "IT Division" },
-	                { id: 11, pid: 2, Nama: "Land Surveying Division" },
-	                { id: 12, pid: 2, Nama: "Training Division" },
-	                { id: 13, pid: 7, Nama: "Marketing" },
-	                { id: 14, pid: 7, Nama: "Marketing Support" },
-	                { id: 15, pid: 8, Nama: "Staff" },
-	                { id: 16, pid: 9, Nama: "Staff" },
-	                { id: 17, pid: 10, Nama: "Staff" },
-	                { id: 18, pid: 11, Nama: "Staff" }
-
+	/* Struktur Organisasi disembunyikan sementara - tampilan belum sempurna
+	var orgData = {
+	    name: "Gunawan Jaya",
+	    title: "Direktur Utama",
+	    img: "<?php echo base_url(); ?>assets/img/struktur/Gunawan Jaya.jpg",
+	    children: [
+	        {
+	            name: "Iwan Satriawan",
+	            title: "Direktur Marketing",
+	            img: "<?php echo base_url(); ?>assets/img/struktur/iwanst.jpg",
+	            // Ir. Andreas Suradji disembunyikan dari struktur organisasi atas permintaan; data foto tetap ada di assets.
+	            children: [
+	                { name: "Bussiness Development Division" },
+	                { name: "Finance Departement" },
+	                { name: "HR Departement" },
+	                {
+	                    name: "Data and Software Division",
+	                    children: [
+	                        { name: "Marketing" },
+	                        { name: "Marketing Support" }
+	                    ]
+	                },
+	                { name: "Thematic Division", children: [{ name: "Staff" }] },
+	                { name: "FotoGrametri Division", children: [{ name: "Staff" }] },
+	                { name: "IT Division", children: [{ name: "Staff" }] },
+	                { name: "Land Surveying Division", children: [{ name: "Staff" }] },
+	                { name: "Training Division" }
 	            ]
-	        });
+	        }
+	    ]
+	};
+
+	$('#orgchart').orgchart({
+	    'data': orgData,
+	    'zoom': true,
+	    'nodeTitle': 'name',
+	    'nodeContent': 'title',
+	    'nodeTemplate': function (data) {
+	        var avatar = data.img ? '<img class="oc-avatar" src="' + data.img + '">' : '';
+	        return avatar
+	            + '<div class="title">' + data.name + '</div>'
+	            + (data.title ? '<div class="content">' + data.title + '</div>' : '');
+	    }
+	});
+	*/
 
 	var acc = document.getElementsByClassName("accordion");
 	var i;
