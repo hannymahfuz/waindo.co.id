@@ -28,11 +28,6 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/sektor.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <style type="text/css">
-   	.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
-	    color: rgba(32, 197, 18, 0.9);
-	    border-bottom: 5px solid #379e34;
-	}
-
 	#myTab.nav-tabs-sticky {
 	    position: sticky;
 	    z-index: 1010;
@@ -74,9 +69,6 @@
 	    width: 100%;
 	}
 
-	.pl-lg-5, .px-lg-5 {
-	    padding-left: 4rem !important;
-	} 
 	.active, .accordion:hover {
 	    background-color: #1e4c7c;
 	}
@@ -109,16 +101,6 @@
 	    background-color: #8ead8e;
 	    color: white;
 	}
-	header {
-	    position: fixed;
-	    top: 0;
-	    left: 0;
-	    width: 100%;
-	    z-index: 997;
-	    background: rgba(6,57,110,0.9) !important;
-	    transition: all 0.5s;
-	    height: 82px;
-	}
 	a {
 	    color: #127a0f;
 	    text-decoration: none;
@@ -146,14 +128,14 @@
   <body>
 	 <header role="banner">
 		  <nav class="navbar navbar-expand-lg navbar-light">
-		    <div class="container">
-		      <a class="navbar-brand" href="#"><img src="<?php echo base_url(); ?>assets/img/logo1.png" alt="Image" class="logo" style="width: 30vh;"></a>
+		    <div class="container-fluid nav-container">
+		      <a class="navbar-brand" href="#"><img src="<?php echo base_url(); ?>assets/img/logo1.png" alt="Image" class="logo"></a>
 		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
 		        <span class="navbar-toggler-icon"></span>
 		      </button>
 
 		      <div class="collapse navbar-collapse" id="navbarsExample05">
-		        <ul class="navbar-nav mr-auto pl-lg-5 pl-0" style="height: 40px;">
+		        <ul class="navbar-nav mr-auto">
 	              <li class="">
 	                <a class="nav-link " href="<?php echo base_url();?>">Beranda</a>
 	              </li>
@@ -199,9 +181,6 @@
 	              <li class="">
 	                <a class="nav-link" href="<?php echo base_url()."contact";?>">Hubungi Kami</a>
 	              </li>
-				  <li class="">
-    				<a class="nav-link nav-bar" href="https://forms.gle/oeiJcw76F1M77fJA8" download>Download</a>
-				  </li>
 
               <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <img src="assets/img/in.png" class="flag flag-id" alt="Indonesia" style="width: 25px;"><span> Indonesia</span></a>

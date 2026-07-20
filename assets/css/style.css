@@ -101,7 +101,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 997;
-  background: rgba(6,57,110,0.9) !important;
+  background: rgba(6,57,110,0.95) !important;
   transition: all 0.5s;
 }
 /*header:hover{
@@ -181,27 +181,84 @@ header .navbar {
   /*background: white !important;*/
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   header .navbar {
-    background: #12286e !important;
+    background: rgba(6,57,110,0.95) !important;
     padding-top: .5rem;
     padding-bottom: .5rem;
   }
 }
 
-header .navbar .nav-link {
-  padding: 1.7rem 1rem;
-  outline: none !important;
+/* Nav content uses the full header width (not a 1140px-capped .container) so
+   8 menu items + logo have room to sit on one line down to 992px; a generous
+   max-width keeps it from clustering in the left corner on very wide screens. */
+header .navbar .nav-container {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
-@media (max-width: 1199px) {
-  header .navbar .nav-link {
-    padding: .5rem 0rem;
+@media (min-width: 992px) {
+  header .navbar .nav-container {
+    padding-left: .75rem;
+    padding-right: .75rem;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-header .navbar .nav-link.active {
-  color: #000000 !important;
+header .navbar-brand .logo {
+  height: 34px;
+  width: auto;
+}
+
+header .navbar .nav-link {
+  padding: 1.6rem .4rem;
+  outline: none !important;
+  position: relative;
+  color: rgba(255,255,255,.85);
+  font-size: 13.5px;
+  letter-spacing: .01em;
+  white-space: nowrap;
+  transition: color .2s ease;
+}
+
+@media (max-width: 991px) {
+  header .navbar .nav-link {
+    padding: .5rem 0rem;
+    white-space: normal;
+  }
+}
+
+header .navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: .4rem;
+  right: .4rem;
+  bottom: 1.05rem;
+  height: 2px;
+  background: #379e34;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .25s ease;
+}
+
+@media (max-width: 991px) {
+  header .navbar .nav-link::after {
+    display: none;
+  }
+}
+
+header .navbar .nav-link:hover,
+header .navbar .nav-link.active,
+header .navbar li.active > .nav-link {
+  color: rgba(32, 197, 18, 0.9);
+}
+
+header .navbar .nav-link:hover::after,
+header .navbar .nav-link.active::after,
+header .navbar li.active > .nav-link::after {
+  transform: scaleX(1);
 }
 
 header .navbar .dropdown-menu {
